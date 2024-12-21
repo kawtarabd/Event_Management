@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mes Évaluations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .star-rating {
+            color: #ffd700;
+        }
+        .rating-date {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        .rating-card {
+            margin-bottom: 1rem;
+        }
+        .event-link {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .event-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Mes Évaluations</h2>
+
+        <!-- Messages de succès/erreur -->
+        <div th:if="${success}" class="alert alert-success" role="alert">
+            <p th:text="${success}"></p>
+        </div>
+        <div th:if="${error}" class="alert alert-danger" role="alert">
+            <p th:text="${error}"></p>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Total des évaluations</h5>
+                        <p class="h3" th:text="${#lists.size(ratings)}">0</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Note moyenne donnée</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="star-rating h4 mb-0">
+                                <th:block th:with="avg=${ratings.stream().mapToInt(r -> r.score).average().orElse(0)}">
+                                    <th:block th:each="i : ${#numbers.sequence(1, 5)}">
+                                        <i class="fas fa-star" 
+                                           th:class="${i <= avg ? 'fas fa-star' : 'far fa-star'}"></i>
+                                    </th:block>
+                                </th:block>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Liste des évaluations -->
+        <div class="ratings-list">
+            <div th:if="${#lists.isEmpty(ratings)}" class="alert alert-info">
+                Vous n'avez pas encore donné d'évaluation.
+            </div>
+            
+            <div th:each="rating : ${ratings}" class="card rating-card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h5>
+                                <a th:href="@{/events/{id}(id=${rating.event.id})}" 
+                                   class="event-link" 
+                                   th:text="${rating.event.title}">
+                                    Titre de l'événement
+                                </a>
+                            </h5>
+                            <div class="star-rating mb-2">
+                                <th:block th:each="i : ${#numbers.sequence(1, 5)}">
+                                    <i class="fas fa-star" 
+                                       th:class="${i <= rating.score ? 'fas fa-star' : 'far fa-star'}"></i>
+                                </th:block>
+                            </div>
+                            <div class="mt-2" th:text="${rating.comment}">Commentaire</div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" 
+                                    data-bs-toggle="dropdown">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" 
+                                       th:href="@{/ratings/event/{id}(id=${rating.event.id})}">
+                                        Voir toutes les évaluations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" 
+                                       th:onclick="'editRating(' + ${rating.id} + ')'">
+                                        Modifier
+                                    </a>
+                                </li>
+                                <li>
+                                    <form th:action="@{/ratings/{id}/delete(id=${rating.id})}" 
+                                          method="post" style="display: inline;">
+                                        <button type="submit" class="dropdown-item text-danger"
+                                                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette évaluation ?')">
+                                            Supprimer
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <small class="rating-date" 
+                               th:text="${#temporals.format(rating.createdAt, 'dd/MM/yyyy HH:mm')}">
+                            Date
+                        </small>
+                        <small class="ms-2" 
+                               th:text="${'Événement du ' + #temporals.format(rating.event.date, 'dd/MM/yyyy')}">
+                            Date de l'événement
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function editRating(ratingId) {
+            // Rediriger vers la page d'évaluation de l'événement avec le focus sur la modification
+            const ratingElement = document.querySelector(`[data-rating-id="${ratingId}"]`);
+            const eventId = ratingElement.getAttribute('data-event-id');
+            window.location.href = `/ratings/event/${eventId}?edit=${ratingId}`;
+        }
+    </script>
+</body>
+</html>

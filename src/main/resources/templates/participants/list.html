@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Participants</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col">
+                <h2>Participants - <span th:text="${event.title}"></span></h2>
+                <p class="text-muted">
+                    <span th:text="${#temporals.format(event.date, 'dd/MM/yyyy HH:mm')}">Date</span>
+                    - <span th:text="${event.location}">Lieu</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Participants</h5>
+                        <p class="card-text h2" th:text="${#lists.size(participants)}">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Places Restantes</h5>
+                        <p class="card-text h2" th:text="${event.capacity - #lists.size(participants)}">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Présents</h5>
+                        <p class="card-text h2" th:text="${#lists.size(participants.?[hasAttended])}">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Paiements Reçus</h5>
+                        <p class="card-text h2" th:text="${#lists.size(participants.?[hasPaid])}">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Liste des participants -->
+        <div class="card">
+            <div class="card-body">
+                <div th:if="${participants.empty}" class="alert alert-info">
+                    Aucun participant inscrit pour le moment.
+                </div>
+                
+                <div th:if="${!participants.empty}" class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Date d'inscription</th>
+                                <th>Statut</th>
+                                <th>Paiement</th>
+                                <th>Présence</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="participant : ${participants}">
+                                <td th:text="${participant.user.username}">Nom</td>
+                                <td th:text="${participant.user.email}">Email</td>
+                                <td th:text="${#temporals.format(participant.registrationDate, 'dd/MM/yyyy HH:mm')}">Date</td>
+                                <td>
+                                    <span class="badge"
+                                          th:classappend="${participant.status == T(com.garny.event_management.entity.Participant.ParticipantStatus).CONFIRMED ? 'bg-success' : 'bg-warning'}"
+                                          th:text="${participant.status}">
+                                        Status
+                                    </span>
+                                </td>
+                                <td>
+                                    <span th:if="${participant.hasPaid}" class="text-success">
+                                        <i class="fas fa-check"></i> Payé
+                                    </span>
+                                    <span th:unless="${participant.hasPaid}" class="text-danger">
+                                        <i class="fas fa-times"></i> En attente
+                                    </span>
+                                </td>
+                                <td>
+                                    <span th:if="${participant.hasAttended}" class="text-success">
+                                        <i class="fas fa-check"></i> Présent
+                                    </span>
+                                    <span th:unless="${participant.hasAttended}" class="text-secondary">
+                                        Non enregistré
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <form th:if="${!participant.hasAttended}"
+                                              th:action="@{/participants/checkin/{eventId}/{participantId}(eventId=${event.id},participantId=${participant.id})}"
+                                              method="post" style="display: inline;">
+                                            <button type="submit" class="btn btn-sm btn-success">
+                                                Marquer présent
+                                            </button>
+                                        </form>
+                                        <button type="button" class="btn btn-sm btn-info ms-1"
+                                                data-bs-toggle="modal" 
+                                                th:data-bs-target="'#detailsModal' + ${participant.id}">
+                                            Détails
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals pour les détails -->
+        <div th:each="participant : ${participants}" 
+             th:id="'detailsModal' + ${participant.id}" 
+             class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Détails du participant</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <dl class="row">
+                            <dt class="col-sm-4">Besoins spéciaux</dt>
+                            <dd class="col-sm-8" th:text="${participant.specialRequirements ?: 'Aucun'}">-</dd>
+
+                            <dt class="col-sm-4">Hébergement</dt>
+                            <dd class="col-sm-8" th:text="${participant.needsAccommodation ? 'Oui' : 'Non'}">Non</dd>
+
+                            <dt class="col-sm-4">Transport</dt>
+                            <dd class="col-sm-8" th:text="${participant.needsTransportation ? 'Oui' : 'Non'}">Non</dd>
+
+                            <dt class="col-sm-4">Référence paiement</dt>
+                            <dd class="col-sm-8" th:text="${participant.paymentReference ?: '-'}">-</dd>
+
+                            <dt class="col-sm-4">Date de paiement</dt>
+                            <dd class="col-sm-8" 
+                                th:text="${participant.paymentDate != null ? #temporals.format(participant.paymentDate, 'dd/MM/yyyy HH:mm') : '-'}">
+                                -
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</body>
+</html>
