@@ -25,8 +25,7 @@ public class Payment {
     private BigDecimal amount;
 
     @NotNull
-    @Enumerated(EnumType.STRING)
-    private PaymentStatus status;
+    private String status; // Updated to String
 
     private String transactionId;
 
@@ -72,11 +71,11 @@ public class Payment {
         this.amount = amount;
     }
 
-    public PaymentStatus getStatus() {
-        return status;
+    public String getStatus() { // Updated getter
+        return status; 
     }
 
-    public void setStatus(PaymentStatus status) {
+    public void setStatus(String status) { // Updated setter
         this.status = status;
     }
 
@@ -103,7 +102,4 @@ public class Payment {
     public void setPaymentMethod(String paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
-    
-
-
 }
