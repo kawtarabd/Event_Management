@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mes Événements</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Mes Événements</h2>
+
+        <!-- Statistiques -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Inscriptions</h5>
+                        <p class="card-text h2" th:text="${#lists.size(participations)}">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Événements à venir</h5>
+                        <p class="card-text h2" th:text="${#lists.size(upcomingEvents)}">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">En attente</h5>
+                        <p class="card-text h2" 
+                           th:text="${#lists.size(participations.?[status.name() == 'WAITLIST'])}">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Paiements en attente</h5>
+                        <p class="card-text h2" 
+                           th:text="${#lists.size(participations.?[!hasPaid])}">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Événements à venir -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Événements à venir</h4>
+            </div>
+            <div class="card-body">
+                <div th:if="${upcomingEvents.empty}" class="alert alert-info">
+                    Aucun événement à venir.
+                </div>
+                
+                <div th:if="${!upcomingEvents.empty}" class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Événement</th>
+                                <th>Date</th>
+                                <th>Lieu</th>
+                                <th>Statut</th>
+                                <th>Paiement</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="participant : ${upcomingEvents}">
+                                <td>
+                                    <a th:href="@{/events/{id}(id=${participant.event.id})}" 
+                                       th:text="${participant.event.title}">
+                                        Titre
+                                    </a>
+                                </td>
+                                <td th:text="${#temporals.format(participant.event.date, 'dd/MM/yyyy HH:mm')}">Date</td>
+                                <td th:text="${participant.event.location}">Lieu</td>
+                                <td>
+                                    <span class="badge"
+                                          th:classappend="${participant.status.name() == 'CONFIRMED' ? 'bg-success' : 'bg-warning'}"
+                                          th:text="${participant.status}">
+                                        Status
+                                    </span>
+                                </td>
+                                <td>
+                                    <span th:if="${participant.hasPaid}" class="text-success">
+                                        <i class="fas fa-check"></i> Payé
+                                        <small th:if="${participant.paymentReference}" 
+                                               th:text="'(Ref: ' + ${participant.paymentReference} + ')'">
+                                        </small>
+                                    </span>
+                                    <span th:unless="${participant.hasPaid}" class="text-danger">
+                                        <i class="fas fa-times"></i> En attente
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a th:if="${!participant.hasPaid && participant.status.name() == 'CONFIRMED'}"
+                                           th:href="@{/payments/process/{eventId}(eventId=${participant.event.id})}"
+                                           class="btn btn-sm btn-primary">
+                                            Payer
+                                        </a>
+                                        <form th:action="@{/participants/cancel/{eventId}(eventId=${participant.event.id})}"
+                                              method="post" 
+                                              style="display: inline;">
+                                            <button type="submit" 
+                                                    class="btn btn-sm btn-danger ms-1"
+                                                    onclick="return confirm('Êtes-vous sûr de vouloir annuler votre inscription ?')">
+                                                Annuler
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historique des événements -->
+        <div class="card">
+            <div class="card-header">
+                <h4>Historique des événements</h4>
+            </div>
+            <div class="card-body">
+                <div th:if="${participations.?[event.date.isBefore(T(java.time.LocalDateTime).now())].empty}" 
+                     class="alert alert-info">
+                    Aucun événement passé.
+                </div>
+                
+                <div th:if="${!participations.?[event.date.isBefore(T(java.time.LocalDateTime).now())].empty}" 
+                     class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Événement</th>
+                                <th>Date</th>
+                                <th>Lieu</th>
+                                <th>Présence</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="participant : ${participations}" 
+                                th:if="${participant.event.date.isBefore(T(java.time.LocalDateTime).now())}">
+                                <td>
+                                    <a th:href="@{/events/{id}(id=${participant.event.id})}" 
+                                       th:text="${participant.event.title}">
+                                        Titre
+                                    </a>
+                                </td>
+                                <td th:text="${#temporals.format(participant.event.date, 'dd/MM/yyyy HH:mm')}">Date</td>
+                                <td th:text="${participant.event.location}">Lieu</td>
+                                <td>
+                                    <span th:if="${participant.hasAttended}" class="text-success">
+                                        <i class="fas fa-check"></i> Présent
+                                    </span>
+                                    <span th:unless="${participant.hasAttended}" class="text-danger">
+                                        <i class="fas fa-times"></i> Absent
+                                    </span>
+                                </td>
+                                <td>
+                                    <a th:href="@{/ratings/event/{id}(id=${participant.event.id})}"
+                                       class="btn btn-sm btn-primary">
+                                        Évaluer
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</body>
+</html>

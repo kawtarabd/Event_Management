@@ -1,0 +1,152 @@
+2024-12-05 01:13:46 [restartedMain] INFO  c.g.e.EventManagementApplication - Starting EventManagementApplication using Java 21.0.2 with PID 10468 (C:\Users\garny\Pictures\event-management\target\classes started by garny in C:\Users\garny\Pictures\event-management)
+2024-12-05 01:13:46 [restartedMain] DEBUG c.g.e.EventManagementApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-12-05 01:13:46 [restartedMain] INFO  c.g.e.EventManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-05 01:13:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-05 01:13:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-05 01:13:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-05 01:13:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 322 ms. Found 5 JPA repository interfaces.
+2024-12-05 01:13:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-05 01:13:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-05 01:13:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-12-05 01:13:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-05 01:13:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7511 ms
+2024-12-05 01:13:54 [restartedMain] DEBUG c.g.e.s.CsrfTokenBindingFilter - Filter 'csrfTokenBindingFilter' configured for use
+2024-12-05 01:13:55 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-05 01:13:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-05 01:13:55 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d5292e5
+2024-12-05 01:13:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-05 01:13:58 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-05 01:13:59 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-05 01:14:03 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@459f0a43, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@313047d4, org.springframework.security.web.context.SecurityContextHolderFilter@46b701c5, org.springframework.security.web.header.HeaderWriterFilter@52d7f0eb, org.springframework.web.filter.CorsFilter@11ca6696, org.springframework.security.web.csrf.CsrfFilter@27cb4d5c, org.springframework.security.web.authentication.logout.LogoutFilter@4100dc95, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35f2b519, org.springframework.security.web.session.ConcurrentSessionFilter@36c45856, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6dc7f050, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b8fcecb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3de9f6c7, org.springframework.security.web.session.SessionManagementFilter@3f9ce8d7, org.springframework.security.web.access.ExceptionTranslationFilter@1c24b08b, org.springframework.security.web.access.intercept.AuthorizationFilter@26aa5e2a]
+2024-12-05 01:14:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-05 01:14:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-05 01:14:04 [restartedMain] INFO  c.g.e.EventManagementApplication - Started EventManagementApplication in 19.646 seconds (process running for 21.203)
+2024-12-05 01:14:09 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-05 01:14:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-05 01:14:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
+2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Request requested invalid session id A0E5644D128274942707C5BE477B67C5
+2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/dashboard?continue to session
+2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/auth/login
+2024-12-05 01:14:09 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /auth/login
+2024-12-05 01:14:09 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-05 01:14:09 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /auth/login
+2024-12-05 01:14:10 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:14:10 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-05 01:14:10 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:14:18 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
+2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from E2657BB9AB2927F97FD461CD75947E76
+2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.c.session.SessionRegistryImpl - Registering session 5E0E98496CAB07223C8172F90175F124, for principal com.garny.event_management.security.CustomUserDetails@24a0e3a4
+2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.CsrfAuthenticationStrategy - Replaced CSRF Token
+2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@c39bd22]
+2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]
+2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /participants/dashboard
+2024-12-05 01:14:19 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
+2024-12-05 01:14:19 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:19 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /participants/dashboard
+2024-12-05 01:14:20 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:14:20 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:14:20 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/14
+2024-12-05 01:14:37 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/14
+2024-12-05 01:14:37 [http-nio-8080-exec-1] INFO  c.g.e.controller.EventController - Tentative de récupération des détails de l'événement avec l'ID : 14
+2024-12-05 01:14:37 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:14:37 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:14:37 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:45 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
+2024-12-05 01:14:45 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:45 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /participants/dashboard
+2024-12-05 01:14:45 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:14:45 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:14:45 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:48 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/11/participate
+2024-12-05 01:14:48 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:48 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/11/participate
+2024-12-05 01:14:48 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:14:48 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:14:48 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:52 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
+2024-12-05 01:14:52 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:52 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /participants/dashboard
+2024-12-05 01:14:52 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:14:52 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:14:52 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/logout
+2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.logout.LogoutFilter - Logging out [UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.l.SecurityContextLogoutHandler - Invalidated session 5E0E98496CAB07223C8172F90175F124
+2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /auth/login
+2024-12-05 01:14:55 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /auth/login
+2024-12-05 01:14:55 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-05 01:14:55 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /auth/login
+2024-12-05 01:14:55 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:14:55 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-05 01:14:55 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from 6386A850951A931A2B9AA7F611146146
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.c.session.SessionRegistryImpl - Registering session 87B844BD3425A56EA41B4AD3E7C778B3, for principal com.garny.event_management.security.CustomUserDetails@462700f1
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.CsrfAuthenticationStrategy - Replaced CSRF Token
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@2101980e]
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]
+2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /dashboard
+2024-12-05 01:15:02 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
+2024-12-05 01:15:02 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:02 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /dashboard
+2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Tentative d'accès au dashboard pour l'utilisateur : abdo
+2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Rôle de l'utilisateur : ORGANIZER
+2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Nombre d'événements de l'organisateur : 3
+2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Statistiques calculées : DashboardStatistics{totalEvents=3, upcomingEvents=3, totalParticipants=2}
+2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Distribution des types d'événements : {WORKSHOP=2, CONFERENCE=1}
+2024-12-05 01:15:03 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:15:03 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:15:03 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:04 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/11
+2024-12-05 01:15:04 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:04 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/11
+2024-12-05 01:15:04 [http-nio-8080-exec-2] INFO  c.g.e.controller.EventController - Tentative de récupération des détails de l'événement avec l'ID : 11
+2024-12-05 01:15:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:15:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:15:05 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:07 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
+2024-12-05 01:15:07 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:07 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /dashboard
+2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Tentative d'accès au dashboard pour l'utilisateur : abdo
+2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Rôle de l'utilisateur : ORGANIZER
+2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Nombre d'événements de l'organisateur : 3
+2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Statistiques calculées : DashboardStatistics{totalEvents=3, upcomingEvents=3, totalParticipants=2}
+2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Distribution des types d'événements : {WORKSHOP=2, CONFERENCE=1}
+2024-12-05 01:15:10 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:15:10 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:15:10 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:12 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/11/edit
+2024-12-05 01:15:12 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:12 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/11/edit
+2024-12-05 01:15:12 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:15:12 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:15:12 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:15 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
+2024-12-05 01:15:15 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:15 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /dashboard
+2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Tentative d'accès au dashboard pour l'utilisateur : abdo
+2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Rôle de l'utilisateur : ORGANIZER
+2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Nombre d'événements de l'organisateur : 3
+2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Statistiques calculées : DashboardStatistics{totalEvents=3, upcomingEvents=3, totalParticipants=2}
+2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Distribution des types d'événements : {WORKSHOP=2, CONFERENCE=1}
+2024-12-05 01:15:20 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:15:20 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-05 01:15:20 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/logout
+2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.logout.LogoutFilter - Logging out [UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
+2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.l.SecurityContextLogoutHandler - Invalidated session 87B844BD3425A56EA41B4AD3E7C778B3
+2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /auth/login
+2024-12-05 01:15:25 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /auth/login
+2024-12-05 01:15:25 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-05 01:15:25 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /auth/login
+2024-12-05 01:15:25 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-05 01:15:25 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-05 01:15:25 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
