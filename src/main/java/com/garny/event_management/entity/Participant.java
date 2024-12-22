@@ -20,7 +20,7 @@ public class Participant {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-   
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ParticipantStatus status = ParticipantStatus.CONFIRMED;
@@ -39,6 +39,9 @@ public class Participant {
     private boolean needsAccommodation = false;
     private boolean needsTransportation = false;
 
+    private boolean emailConfirmationSent = false;
+    private boolean emailReminderSent = false;
+
     public enum ParticipantStatus {
         CONFIRMED,
         WAITLIST,
@@ -55,7 +58,7 @@ public class Participant {
         this.event = event;
     }
 
-    // Getters and Setters
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -166,6 +169,22 @@ public class Participant {
         this.needsTransportation = needsTransportation;
     }
 
+    public boolean isEmailConfirmationSent() {
+        return emailConfirmationSent;
+    }
+
+    public void setEmailConfirmationSent(boolean emailConfirmationSent) {
+        this.emailConfirmationSent = emailConfirmationSent;
+    }
+
+    public boolean isEmailReminderSent() {
+        return emailReminderSent;
+    }
+
+    public void setEmailReminderSent(boolean emailReminderSent) {
+        this.emailReminderSent = emailReminderSent;
+    }
+
     // Helper methods
     public boolean isConfirmed() {
         return status == ParticipantStatus.CONFIRMED;
@@ -179,16 +198,10 @@ public class Participant {
         return status == ParticipantStatus.CANCELLED;
     }
 
-    public boolean canAttend() {
-        return isConfirmed() && (event.isPast() || !event.isFullyBooked());
-    }
-
-    public String getEmail() {
-        return user != null ? user.getEmail() : null;
-    }
-
-    public String getName() {
-        return user != null ? user.getUsername() : null;
+    public void moveToConfirmed() {
+        if (status == ParticipantStatus.WAITLIST && !event.isFullyBooked()) {
+            this.status = ParticipantStatus.CONFIRMED;
+        }
     }
 
     @PrePersist

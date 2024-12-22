@@ -1,152 +1,292 @@
-2024-12-05 01:13:46 [restartedMain] INFO  c.g.e.EventManagementApplication - Starting EventManagementApplication using Java 21.0.2 with PID 10468 (C:\Users\garny\Pictures\event-management\target\classes started by garny in C:\Users\garny\Pictures\event-management)
-2024-12-05 01:13:46 [restartedMain] DEBUG c.g.e.EventManagementApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
-2024-12-05 01:13:46 [restartedMain] INFO  c.g.e.EventManagementApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-05 01:13:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-12-05 01:13:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-12-05 01:13:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-05 01:13:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 322 ms. Found 5 JPA repository interfaces.
-2024-12-05 01:13:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-12-05 01:13:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-12-05 01:13:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-12-05 01:13:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-12-05 01:13:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7511 ms
-2024-12-05 01:13:54 [restartedMain] DEBUG c.g.e.s.CsrfTokenBindingFilter - Filter 'csrfTokenBindingFilter' configured for use
-2024-12-05 01:13:55 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-05 01:13:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-12-05 01:13:55 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d5292e5
-2024-12-05 01:13:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-12-05 01:13:58 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-05 01:13:59 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-12-05 01:14:03 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@459f0a43, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@313047d4, org.springframework.security.web.context.SecurityContextHolderFilter@46b701c5, org.springframework.security.web.header.HeaderWriterFilter@52d7f0eb, org.springframework.web.filter.CorsFilter@11ca6696, org.springframework.security.web.csrf.CsrfFilter@27cb4d5c, org.springframework.security.web.authentication.logout.LogoutFilter@4100dc95, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35f2b519, org.springframework.security.web.session.ConcurrentSessionFilter@36c45856, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6dc7f050, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b8fcecb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3de9f6c7, org.springframework.security.web.session.SessionManagementFilter@3f9ce8d7, org.springframework.security.web.access.ExceptionTranslationFilter@1c24b08b, org.springframework.security.web.access.intercept.AuthorizationFilter@26aa5e2a]
-2024-12-05 01:14:04 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-12-05 01:14:04 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-12-05 01:14:04 [restartedMain] INFO  c.g.e.EventManagementApplication - Started EventManagementApplication in 19.646 seconds (process running for 21.203)
-2024-12-05 01:14:09 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-05 01:14:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-12-05 01:14:09 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
-2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
-2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Request requested invalid session id A0E5644D128274942707C5BE477B67C5
-2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/dashboard?continue to session
-2024-12-05 01:14:09 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/auth/login
-2024-12-05 01:14:09 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /auth/login
-2024-12-05 01:14:09 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-12-05 01:14:09 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /auth/login
-2024-12-05 01:14:10 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:14:10 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-12-05 01:14:10 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:14:18 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
-2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
-2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from E2657BB9AB2927F97FD461CD75947E76
-2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.c.session.SessionRegistryImpl - Registering session 5E0E98496CAB07223C8172F90175F124, for principal com.garny.event_management.security.CustomUserDetails@24a0e3a4
-2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.CsrfAuthenticationStrategy - Replaced CSRF Token
-2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@c39bd22]
-2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]
-2024-12-05 01:14:19 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /participants/dashboard
-2024-12-05 01:14:19 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
-2024-12-05 01:14:19 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:19 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /participants/dashboard
-2024-12-05 01:14:20 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:14:20 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:14:20 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/14
-2024-12-05 01:14:37 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:37 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/14
-2024-12-05 01:14:37 [http-nio-8080-exec-1] INFO  c.g.e.controller.EventController - Tentative de récupération des détails de l'événement avec l'ID : 14
-2024-12-05 01:14:37 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:14:37 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:14:37 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:45 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
-2024-12-05 01:14:45 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:45 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /participants/dashboard
-2024-12-05 01:14:45 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:14:45 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:14:45 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:48 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/11/participate
-2024-12-05 01:14:48 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:48 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/11/participate
-2024-12-05 01:14:48 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:14:48 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:14:48 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:52 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
-2024-12-05 01:14:52 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:52 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /participants/dashboard
-2024-12-05 01:14:52 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:14:52 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:14:52 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/logout
-2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.logout.LogoutFilter - Logging out [UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@24a0e3a4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=E2657BB9AB2927F97FD461CD75947E76], Granted Authorities=[ROLE_PARTICIPANT]]]
-2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.l.SecurityContextLogoutHandler - Invalidated session 5E0E98496CAB07223C8172F90175F124
-2024-12-05 01:14:55 [http-nio-8080-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /auth/login
-2024-12-05 01:14:55 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /auth/login
-2024-12-05 01:14:55 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-12-05 01:14:55 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /auth/login
-2024-12-05 01:14:55 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:14:55 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-12-05 01:14:55 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from 6386A850951A931A2B9AA7F611146146
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.c.session.SessionRegistryImpl - Registering session 87B844BD3425A56EA41B4AD3E7C778B3, for principal com.garny.event_management.security.CustomUserDetails@462700f1
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.CsrfAuthenticationStrategy - Replaced CSRF Token
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@2101980e]
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]
-2024-12-05 01:15:02 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /dashboard
-2024-12-05 01:15:02 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
-2024-12-05 01:15:02 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:02 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /dashboard
-2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Tentative d'accès au dashboard pour l'utilisateur : abdo
-2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Rôle de l'utilisateur : ORGANIZER
-2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Nombre d'événements de l'organisateur : 3
-2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Statistiques calculées : DashboardStatistics{totalEvents=3, upcomingEvents=3, totalParticipants=2}
-2024-12-05 01:15:02 [http-nio-8080-exec-8] INFO  c.g.e.controller.DashboardController - Distribution des types d'événements : {WORKSHOP=2, CONFERENCE=1}
-2024-12-05 01:15:03 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:15:03 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:15:03 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:04 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/11
-2024-12-05 01:15:04 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:04 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/11
-2024-12-05 01:15:04 [http-nio-8080-exec-2] INFO  c.g.e.controller.EventController - Tentative de récupération des détails de l'événement avec l'ID : 11
-2024-12-05 01:15:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:15:05 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:15:05 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:07 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
-2024-12-05 01:15:07 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:07 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /dashboard
-2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Tentative d'accès au dashboard pour l'utilisateur : abdo
-2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Rôle de l'utilisateur : ORGANIZER
-2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Nombre d'événements de l'organisateur : 3
-2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Statistiques calculées : DashboardStatistics{totalEvents=3, upcomingEvents=3, totalParticipants=2}
-2024-12-05 01:15:07 [http-nio-8080-exec-3] INFO  c.g.e.controller.DashboardController - Distribution des types d'événements : {WORKSHOP=2, CONFERENCE=1}
-2024-12-05 01:15:10 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:15:10 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:15:10 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:12 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /events/11/edit
-2024-12-05 01:15:12 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:12 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /events/11/edit
-2024-12-05 01:15:12 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:15:12 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:15:12 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:15 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /dashboard
-2024-12-05 01:15:15 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:15 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /dashboard
-2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Tentative d'accès au dashboard pour l'utilisateur : abdo
-2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Rôle de l'utilisateur : ORGANIZER
-2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Nombre d'événements de l'organisateur : 3
-2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Statistiques calculées : DashboardStatistics{totalEvents=3, upcomingEvents=3, totalParticipants=2}
-2024-12-05 01:15:15 [http-nio-8080-exec-9] INFO  c.g.e.controller.DashboardController - Distribution des types d'événements : {WORKSHOP=2, CONFERENCE=1}
-2024-12-05 01:15:20 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:15:20 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
-2024-12-05 01:15:20 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/logout
-2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.logout.LogoutFilter - Logging out [UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@462700f1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=6386A850951A931A2B9AA7F611146146], Granted Authorities=[ROLE_ORGANIZER]]]
-2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.l.SecurityContextLogoutHandler - Invalidated session 87B844BD3425A56EA41B4AD3E7C778B3
-2024-12-05 01:15:25 [http-nio-8080-exec-3] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /auth/login
-2024-12-05 01:15:25 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /auth/login
-2024-12-05 01:15:25 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-12-05 01:15:25 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /auth/login
-2024-12-05 01:15:25 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
-2024-12-05 01:15:25 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
-2024-12-05 01:15:25 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-22 13:50:43 [restartedMain] INFO  c.g.e.EventManagementApplication - Starting EventManagementApplication using Java 21.0.2 with PID 22040 (C:\Users\garny\Music\event-management\target\classes started by garny in C:\Users\garny\Music\event-management)
+2024-12-22 13:50:43 [restartedMain] DEBUG c.g.e.EventManagementApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-12-22 13:50:43 [restartedMain] INFO  c.g.e.EventManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-22 13:50:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-22 13:50:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-22 13:50:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-22 13:50:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2024-12-22 13:50:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-22 13:50:46 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-22 13:50:46 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-12-22 13:50:46 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-22 13:50:46 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2784 ms
+2024-12-22 13:50:46 [restartedMain] DEBUG c.g.e.s.CsrfTokenBindingFilter - Filter 'csrfTokenBindingFilter' configured for use
+2024-12-22 13:50:47 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-22 13:50:47 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-22 13:50:47 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@787fd4fa
+2024-12-22 13:50:47 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-22 13:50:49 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 13:50:49 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-22 13:50:51 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@162d68c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5714ad47, org.springframework.security.web.context.SecurityContextHolderFilter@12a54cc9, org.springframework.security.web.header.HeaderWriterFilter@5b1c3dc8, org.springframework.web.filter.CorsFilter@1fe71255, org.springframework.security.web.csrf.CsrfFilter@572dc063, org.springframework.security.web.authentication.logout.LogoutFilter@133cc407, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f48ee6e, org.springframework.security.web.session.ConcurrentSessionFilter@2ca675e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ac1b83a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5024180a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@115ef22c, org.springframework.security.web.session.SessionManagementFilter@4012542b, org.springframework.security.web.access.ExceptionTranslationFilter@242cedc0, org.springframework.security.web.access.intercept.AuthorizationFilter@5f43d77d]
+2024-12-22 13:50:52 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-22 13:50:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-22 13:50:52 [restartedMain] INFO  c.g.e.EventManagementApplication - Started EventManagementApplication in 9.395 seconds (process running for 10.075)
+2024-12-22 13:50:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-22 13:50:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-22 13:50:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-22 13:50:53 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
+2024-12-22 13:50:53 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-22 13:50:53 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Request requested invalid session id 74501F8520BCE1E6451AD5762C6BBB7B
+2024-12-22 13:50:53 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost:8080/participants/dashboard?continue to session
+2024-12-22 13:50:53 [http-nio-8080-exec-1] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to http://localhost:8080/auth/login
+2024-12-22 13:50:53 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /auth/login
+2024-12-22 13:50:53 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-22 13:50:53 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /auth/login
+2024-12-22 13:50:54 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-22 13:50:54 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2024-12-22 13:50:54 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /auth/login
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.s.ChangeSessionIdAuthenticationStrategy - Changed session id from 2F5A56297BBCE6CD6363B6081B063CAF
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.s.c.session.SessionRegistryImpl - Registering session 8BB01D75D1EC94AA6A20435F9A4D0DA0, for principal com.garny.event_management.security.CustomUserDetails@13da3b83
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.CsrfAuthenticationStrategy - Replaced CSRF Token
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@13da3b83, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=2F5A56297BBCE6CD6363B6081B063CAF], Granted Authorities=[ROLE_PARTICIPANT]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@4e634848]
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@13da3b83, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=2F5A56297BBCE6CD6363B6081B063CAF], Granted Authorities=[ROLE_PARTICIPANT]]
+2024-12-22 13:50:56 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /participants/dashboard
+2024-12-22 13:50:56 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /participants/dashboard
+2024-12-22 13:50:56 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@13da3b83, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=2F5A56297BBCE6CD6363B6081B063CAF], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-22 13:50:56 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /participants/dashboard
+2024-12-22 13:50:57 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+2024-12-22 13:50:57 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+2024-12-22 13:50:57 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.garny.event_management.security.CustomUserDetails@13da3b83, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=2F5A56297BBCE6CD6363B6081B063CAF], Granted Authorities=[ROLE_PARTICIPANT]]]
+2024-12-22 14:00:00 [scheduling-1] INFO  c.g.e.service.EventReminderService - Vérification des rappels de dernière minute
+2024-12-22 14:14:02 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-12-22 14:14:02 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 14:14:02 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-22 14:14:02 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-22 14:14:03 [restartedMain] INFO  c.g.e.EventManagementApplication - Starting EventManagementApplication using Java 21.0.2 with PID 22040 (C:\Users\garny\Music\event-management\target\classes started by garny in C:\Users\garny\Music\event-management)
+2024-12-22 14:14:03 [restartedMain] DEBUG c.g.e.EventManagementApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-12-22 14:14:03 [restartedMain] INFO  c.g.e.EventManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-22 14:14:04 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-22 14:14:04 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2024-12-22 14:14:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-22 14:14:05 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-22 14:14:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-12-22 14:14:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-22 14:14:05 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1191 ms
+2024-12-22 14:14:05 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [8BB01D75D1EC94AA6A20435F9A4D0DA0]
+2024-12-22 14:14:05 [restartedMain] ERROR o.a.catalina.session.StandardManager - Exception loading sessions from persistent storage
+java.lang.ClassCastException: class java.io.ObjectStreamClass cannot be cast to class java.lang.String (java.io.ObjectStreamClass and java.lang.String are in module java.base of loader 'bootstrap')
+	at java.base/java.io.ObjectInputStream.readTypeString(ObjectInputStream.java:1839) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.readNonProxy(ObjectStreamClass.java:709) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readClassDescriptor(ObjectInputStream.java:1014) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2050) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1927) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2252) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1762) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:540) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:498) ~[na:na]
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1415) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:985) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:210) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:156) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:346) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4877) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:488) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) ~[spring-boot-3.2.1.jar:3.2.1]
+	at com.garny.event_management.EventManagementApplication.main(EventManagementApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.1.jar:3.2.1]
+2024-12-22 14:14:05 [restartedMain] DEBUG c.g.e.s.CsrfTokenBindingFilter - Filter 'csrfTokenBindingFilter' configured for use
+2024-12-22 14:14:05 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-22 14:14:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-12-22 14:14:05 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4993bdd
+2024-12-22 14:14:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-12-22 14:14:06 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 14:14:06 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3398ad5e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29f93a26, org.springframework.security.web.context.SecurityContextHolderFilter@480af259, org.springframework.security.web.header.HeaderWriterFilter@42ea0840, org.springframework.web.filter.CorsFilter@5237f098, org.springframework.security.web.csrf.CsrfFilter@3052f61e, org.springframework.security.web.authentication.logout.LogoutFilter@4d0f9297, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5b088e12, org.springframework.security.web.session.ConcurrentSessionFilter@72281263, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ab04b10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@600197dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4dd08cd2, org.springframework.security.web.session.SessionManagementFilter@556dfcd6, org.springframework.security.web.access.ExceptionTranslationFilter@5b6c2e99, org.springframework.security.web.access.intercept.AuthorizationFilter@6a2232eb]
+2024-12-22 14:14:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-22 14:14:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-22 14:14:07 [restartedMain] INFO  c.g.e.EventManagementApplication - Started EventManagementApplication in 3.626 seconds (process running for 1404.866)
+2024-12-22 14:14:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-12-22 14:14:08 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 16 class path changes (0 additions, 0 deletions, 16 modifications)
+2024-12-22 14:14:08 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 14:14:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-12-22 14:14:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-12-22 14:14:08 [restartedMain] INFO  c.g.e.EventManagementApplication - Starting EventManagementApplication using Java 21.0.2 with PID 22040 (C:\Users\garny\Music\event-management\target\classes started by garny in C:\Users\garny\Music\event-management)
+2024-12-22 14:14:08 [restartedMain] DEBUG c.g.e.EventManagementApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-12-22 14:14:08 [restartedMain] INFO  c.g.e.EventManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-22 14:14:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-22 14:14:09 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 5 JPA repository interfaces.
+2024-12-22 14:14:09 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-22 14:14:09 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-22 14:14:09 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-12-22 14:14:09 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-22 14:14:09 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 642 ms
+2024-12-22 14:14:09 [restartedMain] DEBUG c.g.e.s.CsrfTokenBindingFilter - Filter 'csrfTokenBindingFilter' configured for use
+2024-12-22 14:14:09 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-22 14:14:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2024-12-22 14:14:09 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@318f8401
+2024-12-22 14:14:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2024-12-22 14:14:09 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 14:14:10 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c74b23d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c34df38, org.springframework.security.web.context.SecurityContextHolderFilter@6f442788, org.springframework.security.web.header.HeaderWriterFilter@3c423e8b, org.springframework.web.filter.CorsFilter@4a884f99, org.springframework.security.web.csrf.CsrfFilter@131159f1, org.springframework.security.web.authentication.logout.LogoutFilter@2dd21e24, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1eaaf1a, org.springframework.security.web.session.ConcurrentSessionFilter@3dadfcf8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@425ffa8d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@317c6d5c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e4ebbad, org.springframework.security.web.session.SessionManagementFilter@24eaf745, org.springframework.security.web.access.ExceptionTranslationFilter@41026732, org.springframework.security.web.access.intercept.AuthorizationFilter@42209b5c]
+2024-12-22 14:14:10 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-12-22 14:14:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-12-22 14:14:10 [restartedMain] INFO  c.g.e.EventManagementApplication - Started EventManagementApplication in 2.08 seconds (process running for 1408.46)
+2024-12-22 14:14:10 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-12-22 14:14:42 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2024-12-22 14:14:42 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 14:14:42 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-12-22 14:14:42 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-12-22 14:14:42 [restartedMain] INFO  c.g.e.EventManagementApplication - Starting EventManagementApplication using Java 21.0.2 with PID 22040 (C:\Users\garny\Music\event-management\target\classes started by garny in C:\Users\garny\Music\event-management)
+2024-12-22 14:14:42 [restartedMain] DEBUG c.g.e.EventManagementApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-12-22 14:14:42 [restartedMain] INFO  c.g.e.EventManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-22 14:14:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-22 14:14:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 5 JPA repository interfaces.
+2024-12-22 14:14:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-22 14:14:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-22 14:14:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-12-22 14:14:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-22 14:14:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 545 ms
+2024-12-22 14:14:43 [restartedMain] DEBUG c.g.e.s.CsrfTokenBindingFilter - Filter 'csrfTokenBindingFilter' configured for use
+2024-12-22 14:14:43 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-22 14:14:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2024-12-22 14:14:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e2aa6f3
+2024-12-22 14:14:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2024-12-22 14:14:43 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.garny.event_management.entity.Rating' due to: null
+2024-12-22 14:14:43 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.garny.event_management.entity.Rating' due to: null
+2024-12-22 14:14:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2024-12-22 14:14:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2024-12-22 14:14:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-12-22 14:14:43 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-22 14:14:44 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.garny.event_management.entity.Rating' due to: null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1232) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.2.jar:6.1.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:464) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1358) ~[spring-boot-3.2.1.jar:3.2.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1347) ~[spring-boot-3.2.1.jar:3.2.1]
+	at com.garny.event_management.EventManagementApplication.main(EventManagementApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.1.jar:3.2.1]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.garny.event_management.entity.Rating' due to: null
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.2.jar:6.1.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.2.jar:6.1.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1820) ~[spring-beans-6.1.2.jar:6.1.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-6.1.2.jar:6.1.2]
+	... 19 common frames omitted
+Caused by: org.hibernate.InstantiationException: Could not instantiate entity 'com.garny.event_management.entity.Rating' due to: null
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:100) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.lambda$prepareMappingModel$15(AbstractEntityPersister.java:5098) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.util.LazyValue.getValue(LazyValue.java:30) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.engine.internal.UnsavedValueFactory.getUnsavedIdentifierValue(UnsavedValueFactory.java:45) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.<init>(BasicEntityIdentifierMappingImpl.java:119) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.generateIdentifierMapping(AbstractEntityPersister.java:5464) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.lambda$prepareMappingModel$16(AbstractEntityPersister.java:5103) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.processSubPart(MappingModelCreationProcess.java:163) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.prepareMappingModel(AbstractEntityPersister.java:5101) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.prepareMappingModel(AbstractEntityPersister.java:4941) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.execute(MappingModelCreationProcess.java:84) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.process(MappingModelCreationProcess.java:42) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.finishInitialization(MappingMetamodelImpl.java:198) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.initializeMappingModel(SessionFactoryImpl.java:364) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.2.jar:6.1.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.2.jar:6.1.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.2.jar:6.1.2]
+	... 23 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:97) ~[hibernate-core-6.4.1.Final.jar:6.4.1.Final]
+	... 42 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The public type Rating must be defined in its own file
+
+	at com.garny.event_management.entity.Rating.<init>(Evaluation.java:8) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	... 45 common frames omitted
+2024-12-22 14:14:57 [restartedMain] INFO  c.g.e.EventManagementApplication - Starting EventManagementApplication using Java 21.0.2 with PID 22040 (C:\Users\garny\Music\event-management\target\classes started by garny in C:\Users\garny\Music\event-management)
+2024-12-22 14:14:57 [restartedMain] DEBUG c.g.e.EventManagementApplication - Running with Spring Boot v3.2.1, Spring v6.1.2
+2024-12-22 14:14:57 [restartedMain] INFO  c.g.e.EventManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-22 14:14:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-22 14:14:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2024-12-22 14:14:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-22 14:14:58 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-22 14:14:58 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-12-22 14:14:58 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-22 14:14:58 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1062 ms
+2024-12-22 14:14:58 [restartedMain] DEBUG c.g.e.s.CsrfTokenBindingFilter - Filter 'csrfTokenBindingFilter' configured for use
+2024-12-22 14:14:58 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-22 14:14:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2024-12-22 14:14:58 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@405123e9
+2024-12-22 14:14:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2024-12-22 14:14:58 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 14:14:59 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dashboardController': Unsatisfied dependency expressed through field 'eventService': Error creating bean with name 'eventService': Unsatisfied dependency expressed through field 'ratingRepository': No qualifying bean of type 'com.garny.event_management.repository.RatingRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-12-22 14:14:59 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-22 14:14:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2024-12-22 14:14:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2024-12-22 14:14:59 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-12-22 14:14:59 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-22 14:14:59 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field ratingRepository in com.garny.event_management.service.EventService required a bean of type 'com.garny.event_management.repository.RatingRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.garny.event_management.repository.RatingRepository' in your configuration.
+
